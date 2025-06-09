@@ -41,7 +41,8 @@ def generate_video():
                     "zoom": 0
                 }
             },
-            "mode": "std"
+            "mode": "pro",
+            "version": "1.6"
         },
         "config": {
             "service_mode": "",
