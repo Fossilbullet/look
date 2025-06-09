@@ -9,6 +9,7 @@ app = Flask(__name__)
 def generate_video():
     data = request.get_json()
     prompt = data.get('prompt')
+    image_url = data.get('image_url') 
     if not prompt:
         return jsonify({"error": "Missing 'prompt' in request body"}), 400
 
@@ -24,6 +25,7 @@ def generate_video():
         "task_type": "video_generation",
         "input": {
             "prompt": prompt,
+            "image_url": image_url,
             "negative_prompt": "",
             "cfg_scale": 0.5,
             "duration": 5,
